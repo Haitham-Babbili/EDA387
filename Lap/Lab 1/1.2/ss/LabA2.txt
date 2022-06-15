@@ -1,0 +1,39 @@
+By Erik Pihl & Abebe Haftu Fitur
+l.a.1   symbolic name INADDR_ANY
+        numeric name  0.0.0.0
+
+l.a.2
+        (a) Something went wrong with recv
+        (b) Orderly shutdown by other end of the connection
+        (c) ret bytes have been copied into cd.buffer
+        (d) ret bytes have been copied into cd.buffer and any remaining bytes may have been discarded
+l.a.3
+        It sends SIGPIPE when the other end breaks the connection.
+        MSG_NOSIGNAL requests send not to send the SIGPIPE signal when the other end breaks the connection
+
+l.c.1
+        The first client gets a response immediately. 
+The second client connects and sends a message and then waits. It does not get a response immediately. 
+Both of the sockets are connected to the server and their state is ESTABLISHED. However only the first
+socket is owned by the server process.
+
+l.c.2
+        The server accepts the second client and immediately repsonds to the message it sent.
+
+l.c.3
+        localhost average RTT (6 attempts) 0.243 ms
+        remote computer average RTT (6 attempts) 1.507 ms
+        Localhost it more than 6 times faster
+
+l.d.1 Simulating 7 clients.
+        Connect timing results for 7 successful connections
+          - min time: 0.379673 ms
+          - max time: 0.576963 ms
+          - average time: 0.438908 ms
+         (0 connections failed!)
+        Roundtrip timing results for 7 connections for 255 round trips
+          - min time: 18.571606 ms
+          - max time: 100.251174 ms
+          - average time: 60.314625 ms
+
+l.d.3 The first Connection timed out was at 1.01 minute 

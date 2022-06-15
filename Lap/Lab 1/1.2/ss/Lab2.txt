@@ -1,0 +1,60 @@
+# Lab 2
+Group 44, Kim Kling & Pontus Malm, MPCSN15
+
+## a.1
+actualAddr, that is bound to 0.0.0.0
+
+## a.2
+
+* a -> Error occurred
+* b -> The socket closed successfully
+* c -> The buffer contains the recieved data
+* d -> The buffer is completely filled with the recieved data
+
+1 is added to kTransferBufferSize to allow space for the zero termination to be added when everything is received.
+
+## a.3
+send() returns -1 if an error occurred.
+
+MSG_NOSIGNAL tells the kernel that we want to handle the error, and not shutdown the process upon failure.
+
+## c.1
+Only the first client recieves an answer.
+
+Netstat dump:
+```
+tcp        0      0 localhost:57863             localhost:50000             ESTABLISHED 10989/./client
+tcp        0      0 localhost:57872             localhost:50000             ESTABLISHED 12425/./client
+tcp        0      0 localhost:50000             localhost:57863             ESTABLISHED 4801/./server
+```
+
+## c.2
+The second client is only able to connect to the server after the first client has terminated it's connection
+
+## c.3
+Local machine:
+`round trip time is 0.157015 ms`
+
+Remote machine:
+`round trip time is 0.925734 ms`
+
+## d.1
+```
+./multi 0.0.0.0 50000 7 255
+Simulating 7 clients.
+Establishing 7 connections...
+  successfully initiated 7 connection attempts!
+Connect timing results for 7 successful connections
+  - min time: 0.359159 ms
+  - max time: 0.809348 ms
+  - average time: 0.557630 ms
+ (0 connections failed!)
+Roundtrip timing results for 7 connections for 255 round trips
+  - min time: 23.424940 ms
+  - max time: 157.238499 ms
+  - average time: 91.039840 ms
+```
+
+## d.3
+It took 65 seconds for the connections to time out
+

@@ -1,0 +1,77 @@
+
+
+
+Client simple Outputs
+=====================================================================
+peterad@remote11:~$ netstat -l |grep '31342'
+tcp        0      0 0.0.0.0:31342           0.0.0.0:*               LISTEN
+
+
+peterad@remote11:~$ netstat dump | grep '31342'
+tcp        0      0 remote11.chalmers:48588 remote11.chalmers:31342 ESTABLISHED
+tcp        0      0 remote11.chalmers:31342 remote11.chalmers:48588 ESTABLISHED
+
+
+peterad@remote11:~$ ./server 31342
+Attempting to bind to port 31342
+Socket is bound to 0.0.0.0 31342
+Connection from 129.16.29.50:48588 -> socket 4
+
+(48588 is for client simple) 
+==================================================================================
+
+tcp        0      0 remote11.chalmers:48630 remote11.chalmers:31342 TIME_WAIT
+
+================================================================================
+
+Question 4:
+
+The send() method indicates that a connection has been closed by returning -1, with an error message
+ECONNRESET. This simply means that the connection has been reset by the peer
+
+
+Question 6:
+
+When the server is up and running, it will be in the listening state:
+peterad@remote11:~$ netstat -l |grep '31342'
+tcp        0      0 0.0.0.0:31342           0.0.0.0:*               LISTEN
+
+The the api call from the client is connect(). This is to initiate a connection to the server
+If it is successful, it will return the file descriptor detail
+If it fails, it returns error number -1, and prints out a message "connect() failed" and closes the FD
+
+The api call from the server is accept(). This is to accept the connection from the client.
+If it is successful, the state of the connection goes to ESTABLISHED
+If it fails, it returns error number -1, and prints out a message "accept() failed" and tries to connect
+another client that maybe waiting in the iterative queue.
+
+peterad@remote11:~$ netstat dump | grep '31342'
+tcp        0      0 remote11.chalmers:48588 remote11.chalmers:31342 ESTABLISHED (client)
+tcp        0      0 remote11.chalmers:31342 remote11.chalmers:48588 ESTABLISHED (server)
+
+For multi-client scenario, the client(s) waiting to connect will be in TIME_WAIT state
+
+tcp        0      0 remote11.chalmers:48630 remote11.chalmers:31342 TIME_WAIT
+
+
+QUESTION 10:
+
+The scenario here is of an iterative server. This means the server only accepts one client at a time.
+Therefore, the largest factor in the measured round trip time of the second client is the time duration 
+that the first connected client stays established to the server. The only thing the second client can do is wait.
+Therefore, its RTT time largely depends on that.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+
+gcc helloworld.c
+
+gcc hello.c -o hello // C language compile command
+
+./hello  
+
+g++ helloworld.cpp -o helloworld.x //c++ compile command
+
+./helloworld.x //execute a c++ program
+
+/mnt/c/Users/OSITA/source/repos //accessing from ubuntu
+
+\\wsl$
+
+ssh nwanu@remote11.chalmers.se
+
+scp lsh.c nwanu@remote11.chalmers.se:/chalmers/users/nwanu // copy files cmd
+
+g++ -Wall -Wextra -g3 /chalmers/users/nwanu/server-iterative.cpp -o server //Compile on Remote server
+
+g++ -Wall -Wextra -g3 /chalmers/users/nwanu/server-iterative.cpp -o $HOME/server //Compile and output file on my directory
+
+ss -tulw // listen
+
+netstat -tulpn | grep LISTEN // filter ports in listen state
+
+netstat -tulpn | grep '5703' | grep LISTEN
+
+tcp        0      0 0.0.0.0:5703            0.0.0.0:*               LISTEN      21567/./server
+tcp        0      0 0.0.0.0:5703            0.0.0.0:*               LISTEN      3087/./server
+
+netstat -l |grep '5703'
+
+netstat -ano | grep "127.0.0.1:5703" | grep "CLOSE_WAIT" > out.txt
+
+ss -p |grep CLOSE-WAIT
+
+netstat --inet
+
+#!/bin/bash
+
+127.0.0.1:5703
+
+ls -rtl to display files
+
+top -n 1 -b > top-output.txt Save runinng top command
+
+ps -o ppid 270 // to get process id of a parent
+
+Status of Top Command S column
+---------------------------------
+'D' = uninterruptible sleep
+'R' = running
+'S' = sleeping
+'T' = traced or stopped
+'Z' = zombie
+
+top to display running process
+
+
+
+g++ -Wall -Extra -g3 server-io-multiplexing-skeleton.cpp -o server
+
+
+
+
+******* copy file to the server ******
+scp server-io-multiplexing-skeleton.cpp haitham@remote11.chalmers.se:/chalmers/users/haitham
+
+
+Close the server crt+z
+
+
+netstat --inet > lab1.3
+
+
+
+./server 31338
+
+./client-multi remote11.chalmers.se 31338 100 10000
+
+
+./client-multi remote11.chalmers.se 31338 60 10000
+
+./client-simple remote11.chalmers.se 31338
+
+./client-multi 0.0.0.0 31336 75 25
+./client-multi remote11.chalmers.se 31336 31336 20
+
+
+Cat 
+
+
+
+####### dig lab3.1 #######
+Echo $HOSTNAME ::: give you your computer name
+
+dig Haithams-MBP:
+;; ANSWER SECTION:
+Haithams-MBP.		0	IN	A	192.168.1.83
+
+;; Query time: 2 msec
+;; SERVER: 192.168.1.1#53(192.168.1.1)
+;; WHEN: Mon Oct 19 10:18:14 CEST 2020
+;; MSG SIZE  rcvd: 57
+
+dig -x 192.168.1.83
+;; ANSWER SECTION:
+83.1.168.192.in-addr.arpa. 0	IN	PTR	Haithams-MBP.
+
+;; Query time: 1 msec
+;; SERVER: 192.168.1.1#53(192.168.1.1)
+;; WHEN: Mon Oct 19 10:22:37 CEST 2020
+;; MSG SIZE  rcvd: 80
+
+Dig yourcomputernae::: will give you your DNS server name and his IP address
+
+Dig $HOSTNAME :::: will give you your machine name and DNS name and it's IP address 
+
+Dig $hostname ::::: will will give us all DNS server name
+
+Dig -x
+
+Dig na remote11.chalmers.se:::: go to etc/hosts and see the local host name
+Dig +trac remote11.chalmers.se:::: trace all DNA
+
+Dig remote11.chalmers.se @ns2.chalmers.se ::: for an ip using specific server.
+
+Dig remote11.chalmers.se ns ::: the 
+
+
+Dig kth.se +nsserch:: will give the lest of dns server , the autherative server to another site, global search .
+
+Dig kth.se NS:::: will give us all the name server listed to that autherative  domain server 
+
+Dig kth.se mx::: mail server
+Dig kth.se soa::::
+
+Dig a.ns.kth.se @ns2.chalmers.se 
+
+dig a.ns.kth.se @sunic.sunet.se::: request not available 
+
+Dig www.kth.se @ns2.chalmers.se :::::: Authuratiive request si tal will remain the same because we force him to follow the same bath always 
+
+
+
+
+
+
+
+

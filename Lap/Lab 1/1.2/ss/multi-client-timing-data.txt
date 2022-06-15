@@ -1,0 +1,199 @@
+These are the results for running the multi client with 7/10/15/30/50/100 clients, each sending 255 queries.
+
+$ for clients in 7 10 15 30 50 100; do
+./client-multi 0.0.0.0 31337 "$clients" 255
+sleep 5
+done
+
+Simulating 7 clients.
+Establishing 7 connections...
+  successfully initiated 7 connection attempts!
+Connect timing results for 7 successful connections
+  - min time: 0.103346 ms
+  - max time: 0.266282 ms
+  - average time: 0.167544 ms
+ (0 connections failed!)
+Roundtrip timing results for 7 connections for 255 round trips
+  - min time: 4.385785 ms
+  - max time: 42.274947 ms
+  - average time: 21.987672 ms
+Simulating 10 clients.
+Establishing 10 connections...
+  successfully initiated 10 connection attempts!
+Connect timing results for 10 successful connections
+  - min time: 0.248263 ms
+  - max time: 0.553493 ms
+  - average time: 0.365679 ms
+ (0 connections failed!)
+Roundtrip timing results for 10 connections for 255 round trips
+  - min time: 11.518695 ms
+  - max time: 56.996533 ms
+  - average time: 34.334377 ms
+Simulating 15 clients.
+Establishing 15 connections...
+  successfully initiated 15 connection attempts!
+Connect timing results for 15 successful connections
+  - min time: 0.634747 ms
+  - max time: 1004.128588 ms
+  - average time: 335.248751 ms
+ (0 connections failed!)
+Roundtrip timing results for 15 connections for 255 round trips
+  - min time: 10.650804 ms
+  - max time: 59.485281 ms
+  - average time: 30.891085 ms
+Simulating 30 clients.
+Establishing 30 connections...
+  successfully initiated 30 connection attempts!
+Connect timing results for 30 successful connections
+  - min time: 1.126568 ms
+  - max time: 1015.198125 ms
+  - average time: 677.034504 ms
+ (0 connections failed!)
+Roundtrip timing results for 30 connections for 255 round trips
+  - min time: 10.062884 ms
+  - max time: 271.797280 ms
+  - average time: 107.870736 ms
+Simulating 50 clients.
+Establishing 50 connections...
+  successfully initiated 50 connection attempts!
+Connect timing results for 50 successful connections
+  - min time: 1.479666 ms
+  - max time: 1015.132227 ms
+  - average time: 812.143872 ms
+ (0 connections failed!)
+Roundtrip timing results for 50 connections for 255 round trips
+  - min time: 12.822619 ms
+  - max time: 896.242828 ms
+  - average time: 321.845218 ms
+Simulating 100 clients.
+Establishing 100 connections...
+  successfully initiated 100 connection attempts!
+Connect timing results for 100 successful connections
+  - min time: 3.732816 ms
+  - max time: 1031.054147 ms
+  - average time: 920.694723 ms
+ (0 connections failed!)
+Roundtrip timing results for 100 connections for 255 round trips
+  - min time: 13.909206 ms
+  - max time: 26448.087017 ms
+  - average time: 3472.415847 ms
+
+These are the results when fixing the number of clients to 7, and sending a large number of queries instead.
+
+$ for queries in 1000 5000 10000; do
+./client-multi 0.0.0.0 31337 7 "$queries"
+sleep 5
+done
+Simulating 7 clients.
+Establishing 7 connections...
+  successfully initiated 7 connection attempts!
+Connect timing results for 7 successful connections
+  - min time: 0.092004 ms
+  - max time: 0.206349 ms
+  - average time: 0.133898 ms
+ (0 connections failed!)
+Roundtrip timing results for 7 connections for 1000 round trips
+  - min time: 21.406881 ms
+  - max time: 140.013035 ms
+  - average time: 80.560812 ms
+Simulating 7 clients.
+Establishing 7 connections...
+  successfully initiated 7 connection attempts!
+Connect timing results for 7 successful connections
+  - min time: 0.337464 ms
+  - max time: 0.640622 ms
+  - average time: 0.437186 ms
+ (0 connections failed!)
+Roundtrip timing results for 7 connections for 5000 round trips
+  - min time: 88.856620 ms
+  - max time: 693.099056 ms
+  - average time: 396.710551 ms
+Simulating 7 clients.
+Establishing 7 connections...
+  successfully initiated 7 connection attempts!
+Connect timing results for 7 successful connections
+  - min time: 0.317608 ms
+  - max time: 0.663498 ms
+  - average time: 0.441715 ms
+ (0 connections failed!)
+Roundtrip timing results for 7 connections for 10000 round trips
+  - min time: 187.000616 ms
+  - max time: 1298.584139 ms
+  - average time: 755.876199 ms
+
+Results when doing the simple denial-of-service attack.
+
+$ date; ./client-multi 0.0.0.0 31338 75 25
+Mon Oct  1 19:57:19 CEST 2018
+Simulating 75 clients.
+Establishing 75 connections...
+  successfully initiated 75 connection attempts!
+  - conn 9 : async connect() error: Connection timed out
+  - conn 10 : async connect() error: Connection timed out
+  - conn 11 : async connect() error: Connection timed out
+  - conn 12 : async connect() error: Connection timed out
+  - conn 13 : async connect() error: Connection timed out
+  - conn 14 : async connect() error: Connection timed out
+  - conn 15 : async connect() error: Connection timed out
+  - conn 16 : async connect() error: Connection timed out
+  - conn 17 : async connect() error: Connection timed out
+  - conn 18 : async connect() error: Connection timed out
+  - conn 19 : async connect() error: Connection timed out
+  - conn 20 : async connect() error: Connection timed out
+  - conn 21 : async connect() error: Connection timed out
+  - conn 22 : async connect() error: Connection timed out
+  - conn 23 : async connect() error: Connection timed out
+  - conn 24 : async connect() error: Connection timed out
+  - conn 25 : async connect() error: Connection timed out
+  - conn 26 : async connect() error: Connection timed out
+  - conn 27 : async connect() error: Connection timed out
+  - conn 28 : async connect() error: Connection timed out
+  - conn 29 : async connect() error: Connection timed out
+  - conn 30 : async connect() error: Connection timed out
+  - conn 31 : async connect() error: Connection timed out
+  - conn 32 : async connect() error: Connection timed out
+  - conn 33 : async connect() error: Connection timed out
+  - conn 34 : async connect() error: Connection timed out
+  - conn 35 : async connect() error: Connection timed out
+  - conn 36 : async connect() error: Connection timed out
+  - conn 37 : async connect() error: Connection timed out
+  - conn 38 : async connect() error: Connection timed out
+  - conn 39 : async connect() error: Connection timed out
+  - conn 40 : async connect() error: Connection timed out
+  - conn 41 : async connect() error: Connection timed out
+  - conn 42 : async connect() error: Connection timed out
+  - conn 43 : async connect() error: Connection timed out
+  - conn 44 : async connect() error: Connection timed out
+  - conn 45 : async connect() error: Connection timed out
+  - conn 46 : async connect() error: Connection timed out
+  - conn 47 : async connect() error: Connection timed out
+  - conn 48 : async connect() error: Connection timed out
+  - conn 49 : async connect() error: Connection timed out
+  - conn 50 : async connect() error: Connection timed out
+  - conn 51 : async connect() error: Connection timed out
+  - conn 52 : async connect() error: Connection timed out
+  - conn 53 : async connect() error: Connection timed out
+  - conn 54 : async connect() error: Connection timed out
+  - conn 55 : async connect() error: Connection timed out
+  - conn 56 : async connect() error: Connection timed out
+  - conn 57 : async connect() error: Connection timed out
+  - conn 58 : async connect() error: Connection timed out
+  - conn 59 : async connect() error: Connection timed out
+  - conn 60 : async connect() error: Connection timed out
+  - conn 61 : async connect() error: Connection timed out
+  - conn 62 : async connect() error: Connection timed out
+  - conn 63 : async connect() error: Connection timed out
+  - conn 64 : async connect() error: Connection timed out
+  - conn 65 : async connect() error: Connection timed out
+  - conn 66 : async connect() error: Connection timed out
+  - conn 67 : async connect() error: Connection timed out
+  - conn 68 : async connect() error: Connection timed out
+  - conn 69 : async connect() error: Connection timed out
+  - conn 70 : async connect() error: Connection timed out
+  - conn 71 : async connect() error: Connection timed out
+  - conn 72 : async connect() error: Connection timed out
+  - conn 73 : async connect() error: Connection timed out
+  - conn 74 : async connect() error: Connection timed out
+^C
+$ date
+Mon Oct  1 19:59:31 CEST 2018

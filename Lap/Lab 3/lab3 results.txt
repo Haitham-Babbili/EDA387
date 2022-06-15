@@ -1,0 +1,741 @@
+
+
+LEKSIDE-PC
+Dig -x ipaddress
+
+inet 10.0.17.156  netmask 255.255.0.0
+
+
+;; AUTHORITY SECTION:
+10.in-addr.arpa.        10800   IN      SOA     localhost. nobody.invalid. 1 3600 1200 604800 10800
+
+dig -x 10.0.17.156
+
+dig -x 172.20.10.6
+
+;; AUTHORITY SECTION:
+20.172.IN-ADDR.ARPA.    3600    IN      SOA     example.org. zonemaster.example.org. 1 3600 1200 604800 10800
+
+
+
+
+peter@LEKSIDE-PC:~$ dig -x 172.20.10.6
+
+; <<>> DiG 9.16.1-Ubuntu <<>> -x 172.20.10.6
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 53709
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;6.10.20.172.in-addr.arpa.      IN      PTR
+
+;; AUTHORITY SECTION:
+20.172.IN-ADDR.ARPA.    3600    IN      SOA     example.org. zonemaster.example.org. 1 3600 1200 604800 10800
+
+;; Query time: 60 msec
+;; SERVER: 172.20.10.1#53(172.20.10.1)
+;; WHEN: Fri Oct 16 15:33:20 EEST 2020
+;; MSG SIZE  rcvd: 130
+
+
+Wireless LAN adapter Wireless Network Connection:
+
+   Connection-specific DNS Suffix  . : dnss.chalmers.se
+   Description . . . . . . . . . . . : Intel(R) Dual Band Wireless-AC 7265
+   Physical Address. . . . . . . . . : 64-80-99-A3-C5-96
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : 2001:6b0:2:2801:bcfd:2c3d:14cc:4367(Preferred)
+   Temporary IPv6 Address. . . . . . : 2001:6b0:2:2801:553d:4198:a48c:3818(Preferred)
+   Link-local IPv6 Address . . . . . : fe80::bcfd:2c3d:14cc:4367%6(Preferred)
+   IPv4 Address. . . . . . . . . . . : 10.0.17.156(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Lease Obtained. . . . . . . . . . : Friday, October 16, 2020 2:36:48 PM
+   Lease Expires . . . . . . . . . . : Saturday, October 17, 2020 2:36:48 PM
+   Default Gateway . . . . . . . . . : fe80::208:e3ff:feff:fc78%6
+                                       10.0.0.1
+   DHCP Server . . . . . . . . . . . : 10.0.0.111
+   DHCPv6 IAID . . . . . . . . . . . : 358908057
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-26-FF-DF-AB-FC-3F-DB-8B-90-54
+   DNS Servers . . . . . . . . . . . : 10.0.0.1
+                                       10.0.0.2
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+   Connection-specific DNS Suffix Search List :
+                                       dnss.chalmers.se
+									   
+									   
+									   
+	C:\Users\LEKSIDE>ipconfig /all
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : LEKSIDE-PC
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+
+Ethernet adapter Local Area Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Intel(R) Ethernet Connection (3) I218-LM
+   Physical Address. . . . . . . . . : FC-3F-DB-8B-90-54
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter
+   Physical Address. . . . . . . . . : 64-80-99-A3-C5-97
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #2
+   Physical Address. . . . . . . . . : 66-80-99-A3-C5-96
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Wireless Network Connection:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Intel(R) Dual Band Wireless-AC 7265
+   Physical Address. . . . . . . . . : 64-80-99-A3-C5-96
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::bcfd:2c3d:14cc:4367%6(Preferred)
+   IPv4 Address. . . . . . . . . . . : 172.20.10.6(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.240
+   Lease Obtained. . . . . . . . . . : Friday, October 16, 2020 2:39:28 PM
+   Lease Expires . . . . . . . . . . : Saturday, October 17, 2020 2:25:03 PM
+   Default Gateway . . . . . . . . . : 172.20.10.1
+   DHCP Server . . . . . . . . . . . : 172.20.10.1
+   DHCPv6 IAID . . . . . . . . . . . : 358908057
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-26-FF-DF-AB-FC-3F-DB-8B-90-54
+   DNS Servers . . . . . . . . . . . : 172.20.10.1
+   NetBIOS over Tcpip. . . . . . . . : Enabled								   
+									   
+									   
+									   
+									   
+									   
+									   
+									 								   
+=================================================================================================================
+
+peter@LEKSIDE-PC:~$ dig -x 172.20.10.3
+
+; <<>> DiG 9.16.1-Ubuntu <<>> -x 172.20.10.3
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 14214
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;3.10.20.172.in-addr.arpa.      IN      PTR
+
+;; AUTHORITY SECTION:
+20.172.IN-ADDR.ARPA.    3600    IN      SOA     example.org. zonemaster.example.org. 1 3600 1200 604800 10800
+
+;; Query time: 4 msec
+;; SERVER: 172.20.10.1#53(172.20.10.1)
+;; WHEN: Fri Oct 16 15:45:45 EEST 2020
+;; MSG SIZE  rcvd: 130
+
+peter@LEKSIDE-PC:~$ dig -x 172.20.10.6
+
+; <<>> DiG 9.16.1-Ubuntu <<>> -x 172.20.10.6
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 55445
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;6.10.20.172.in-addr.arpa.      IN      PTR
+
+;; AUTHORITY SECTION:
+20.172.IN-ADDR.ARPA.    3600    IN      SOA     example.org. zonemaster.example.org. 1 3600 1200 604800 10800
+
+;; Query time: 4 msec
+;; SERVER: 172.20.10.1#53(172.20.10.1)
+;; WHEN: Fri Oct 16 15:45:48 EEST 2020
+;; MSG SIZE  rcvd: 130
+
+
+
+peter@LEKSIDE-PC:~$ dig -x 172.20.10.3 short
+
+; <<>> DiG 9.16.1-Ubuntu <<>> -x 172.20.10.3 short
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 62533
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;3.10.20.172.in-addr.arpa.      IN      PTR
+
+;; AUTHORITY SECTION:
+20.172.IN-ADDR.ARPA.    3600    IN      SOA     example.org. zonemaster.example.org. 1 3600 1200 604800 10800
+
+;; Query time: 4 msec
+;; SERVER: 172.20.10.1#53(172.20.10.1)
+;; WHEN: Fri Oct 16 15:48:29 EEST 2020
+;; MSG SIZE  rcvd: 130
+
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 13254
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;short.                         IN      A
+
+;; AUTHORITY SECTION:
+.                       3600    IN      SOA     a.root-servers.net. nstld.verisign-grs.com. 2020101600 1800 900 604800 86400
+
+;; Query time: 50 msec
+;; SERVER: 172.20.10.1#53(172.20.10.1)
+;; WHEN: Fri Oct 16 15:48:29 EEST 2020
+;; MSG SIZE  rcvd: 109
+
+
+sections////////
+
+global options: +cmd
+OPT PSEUDOSECTION:
+QUESTION SECTION:
+AUTHORITY SECTION:
+Query time:
+
+
+The dig command output has the following sections:
+
+Header: This displays the dig command version number, the global options used by the dig command, and few additional header information.
+QUESTION SECTION: This displays the question it asked the DNS. i.e This is your input. Since we said ‘dig redhat.com’, and the default type dig command uses is A record, it indicates in this section that we asked for the A record of the redhat.com website
+ANSWER SECTION: This displays the answer it receives from the DNS. i.e This is your output. This displays the A record of redhat.com
+AUTHORITY SECTION: This displays the DNS name server that has the authority to respond to this query. Basically this displays available name servers of redhat.com
+ADDITIONAL SECTION: This displays the ip address of the name servers listed in the AUTHORITY SECTION.
+Stats section at the bottom displays few dig command statistics including how much time it took to execute this query
+
+https://learn.akamai.com/en-us/webhelp/pulsar-diagnostic-tools/pulsar-diagnostic-tools/GUID-80B4B9A1-16B2-4D70-8100-7B2617102002.html
+
+arpa
+
+ Advanced Research Projects Agency
+Address and Routing Parameter Area.
+
+
+
+RA              Recursion Available - this be is set or cleared in a
+                response, and denotes whether recursive query support is
+                available in the name server.
+
+
+Recursion desired is a request from the client to the server when making a DNS request, to be able to use the server's cache
+
+Recursion available is the response from the server to the client if the option is available for it or not
+=======================================================================================================
+172.20.10.3/8 255.255.255.240
+
+ SERVER: 172.20.10.1#53(172.20.10.1)
+ 
+ 
+ b) SELF
+ 
+ peter@LEKSIDE-PC:~$ dig -x 192.168.43.200
+
+; <<>> DiG 9.16.1-Ubuntu <<>> -x 192.168.43.200
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 11703
+;; flags: qr aa rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;200.43.168.192.in-addr.arpa.   IN      PTR
+
+;; ANSWER SECTION:
+200.43.168.192.in-addr.arpa. 0  IN      PTR     LEKSIDE-PC.
+
+;; Query time: 7 msec
+;; SERVER: 192.168.43.1#53(192.168.43.1)
+;; WHEN: Fri Oct 16 16:54:45 EEST 2020
+;; MSG SIZE  rcvd: 69
+
+
+================================================================================================
+
+# This file was automatically generated by WSL. To stop automatic generation of this file, add the following entry to /etc/wsl.conf:
+# [network]
+# generateHosts = false
+127.0.0.1       localhost
+127.0.1.1       LEKSIDE-PC.localdomain  LEKSIDE-PC
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+This file shows that the OS supports IPv4 and IPv6, and shows the mapping between to the hostname and the local ip address
+
+It shows the link-local ip addresses that will be used by the OS incase there is no DHCP or a manual assignment of ip addresses 
+======================================
+
+root@LEKSIDE-PC:/# dig wwww.chalmers.se
+
+; <<>> DiG 9.16.1-Ubuntu <<>> wwww.chalmers.se
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 8347
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1280
+; COOKIE: 817aed1904915b3e777fd4375f89adef9996470fdadb4491 (good)
+;; QUESTION SECTION:
+;wwww.chalmers.se.              IN      A
+
+;; AUTHORITY SECTION:
+chalmers.se.            512     IN      SOA     ns1.chalmers.se. cth-nic.chalmers.se. 2020101619 14400 3600 1209600 600
+
+;; Query time: 160 msec
+;; SERVER: 192.168.43.1#53(192.168.43.1)
+;; WHEN: Fri Oct 16 17:27:59 EEST 2020
+;; MSG SIZE  rcvd: 121
+
+root@LEKSIDE-PC:/#
+
+
+root@LEKSIDE-PC:/# dig www.chalmers.se
+
+; <<>> DiG 9.16.1-Ubuntu <<>> www.chalmers.se
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 12590
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 4, ADDITIONAL: 9
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1280
+; COOKIE: a3a92e34f2a274be23bd2c4a5f89ae7e8a4981de353600ab (good)
+;; QUESTION SECTION:
+;www.chalmers.se.               IN      A
+
+;; ANSWER SECTION:
+www.chalmers.se.        8401    IN      A       129.16.71.10
+
+;; AUTHORITY SECTION:
+chalmers.se.            2407    IN      NS      ns1.chalmers.se.
+chalmers.se.            2407    IN      NS      sunic.sunet.se.
+chalmers.se.            2407    IN      NS      ns2.chalmers.se.
+chalmers.se.            2407    IN      NS      ns3.chalmers.se.
+
+;; ADDITIONAL SECTION:
+ns1.chalmers.se.        17392   IN      A       129.16.2.40
+ns2.chalmers.se.        2335    IN      A       129.16.253.252
+ns3.chalmers.se.        2407    IN      A       192.36.120.11
+sunic.sunet.se.         2341    IN      A       192.36.125.2
+ns1.chalmers.se.        9584    IN      AAAA    2001:6b0:2:10::1
+ns2.chalmers.se.        2335    IN      AAAA    2001:6b0:2:20::1
+ns3.chalmers.se.        2407    IN      AAAA    2001:2040:63::11
+sunic.sunet.se.         2319    IN      AAAA    2001:6b0:7::2
+
+;; Query time: 48 msec
+;; SERVER: 192.168.43.1#53(192.168.43.1)
+;; WHEN: Fri Oct 16 17:30:22 EEST 2020
+;; MSG SIZE  rcvd: 344
+
+
+
+The NXDOMAIN is a DNS message type received by the DNS resolver (i.e. client) when a request to 
+resolve a domain is sent to the DNS and cannot be resolved to an IP address. 
+An NXDOMAIN error message means that the domain does not exist
+
+
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 8347
+
+The status header with the return information of NXDOMAIN
+
+There was no answer section 
+
+This is because the domain cannot be found by the DNS server. The DNS server did not get an answer which can translate to the domain not existing.
+======================================================================================
+
+
+2a) The query section of the output gives details of the DNS server in use
+
+
+
+b) root@LEKSIDE-PC:/# dig remote11.chalmers.se
+
+; <<>> DiG 9.16.1-Ubuntu <<>> remote11.chalmers.se
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 57100
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;remote11.chalmers.se.          IN      A
+
+;; ANSWER SECTION:
+remote11.chalmers.se.   10211   IN      A       129.16.29.50
+
+;; Query time: 2 msec
+;; SERVER: 10.0.0.1#53(10.0.0.1)
+;; WHEN: Fri Oct 16 17:52:44 EEST 2020
+;; MSG SIZE  rcvd: 65
+
+
+root@LEKSIDE-PC:/# dig remote12.chalmers.se
+
+; <<>> DiG 9.16.1-Ubuntu <<>> remote12.chalmers.se
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 36399
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;remote12.chalmers.se.          IN      A
+
+;; ANSWER SECTION:
+remote12.chalmers.se.   314     IN      A       129.16.29.51
+
+;; Query time: 1 msec
+;; SERVER: 10.0.0.1#53(10.0.0.1)
+;; WHEN: Fri Oct 16 17:53:30 EEST 2020
+;; MSG SIZE  rcvd: 65
+
+
+
+Server IP is 10.0.0.1
+
+
+no it's not authoritative, when we ran it from Windows, using Ubuntu distribution
+
+running this dig remote11.chalmers.se, will return with A records, passing through etc/hosts/ file
+
+running dig ns remote11.chalmers.se will return with the NS details with all the authorizative servers 
+
+
+======================================================
+root@LEKSIDE-PC:/# dig remote12.chalmers.se @ns2.chalmers.se
+
+
+root@LEKSIDE-PC:/# dig +trace remote11.chalmers.se
+
+chalmers.se.            86400   IN      NS      ns1.chalmers.se.
+chalmers.se.            86400   IN      NS      ns2.chalmers.se.
+chalmers.se.            86400   IN      NS      ns3.chalmers.se.
+chalmers.se.            86400   IN      NS      sunic.sunet.se.
+
+
+3a)
+
+root@LEKSIDE-PC:/# dig ns remote11.chalmers.se
+
+
+;; AUTHORITY SECTION:
+chalmers.se.            25      IN      SOA     ns1.chalmers.se. cth-nic.chalmers.se. 2020101620 14400 3600 1209600 600
+
+;; ANSWER SECTION:
+remote12.chalmers.se.   14400   IN      A       129.16.29.51
+
+;; AUTHORITY SECTION:
+chalmers.se.            172800  IN      NS      ns2.chalmers.se.
+chalmers.se.            172800  IN      NS      ns3.chalmers.se.
+chalmers.se.            172800  IN      NS      ns1.chalmers.se.
+chalmers.se.            172800  IN      NS      sunic.sunet.se.
+
+;; ADDITIONAL SECTION:
+ns1.chalmers.se.        172800  IN      AAAA    2001:6b0:2:10::1
+ns2.chalmers.se.        172800  IN      AAAA    2001:6b0:2:20::1
+ns3.chalmers.se.        172800  IN      AAAA    2001:2040:63::11
+ns1.chalmers.se.        172800  IN      A       129.16.2.40
+ns2.chalmers.se.        172800  IN      A       129.16.253.252
+ns3.chalmers.se.        172800  IN      A       192.36.120.11
+
+*******************************
+
+oot@LEKSIDE-PC:/# dig remote11.chalmers.se @ns2.chalmers.se
+
+; <<>> DiG 9.16.1-Ubuntu <<>> remote11.chalmers.se @ns2.chalmers.se
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 47861
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 4, ADDITIONAL: 7
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+; COOKIE: c5231ebc3e15b821305159285f89c3b5b336cd5f8e9f8f6b (good)
+;; QUESTION SECTION:
+;remote11.chalmers.se.          IN      A
+
+;; ANSWER SECTION:
+remote11.chalmers.se.   14400   IN      A       129.16.29.50
+
+;; AUTHORITY SECTION:
+chalmers.se.            172800  IN      NS      ns2.chalmers.se.
+chalmers.se.            172800  IN      NS      ns3.chalmers.se.
+chalmers.se.            172800  IN      NS      ns1.chalmers.se.
+chalmers.se.            172800  IN      NS      sunic.sunet.se.
+
+;; ADDITIONAL SECTION:
+ns1.chalmers.se.        172800  IN      AAAA    2001:6b0:2:10::1
+ns2.chalmers.se.        172800  IN      AAAA    2001:6b0:2:20::1
+ns3.chalmers.se.        172800  IN      AAAA    2001:2040:63::11
+ns1.chalmers.se.        172800  IN      A       129.16.2.40
+ns2.chalmers.se.        172800  IN      A       129.16.253.252
+ns3.chalmers.se.        172800  IN      A       192.36.120.11
+
+;; Query time: 2 msec
+;; SERVER: 2001:6b0:2:20::1#53(2001:6b0:2:20::1)
+;; WHEN: Fri Oct 16 19:00:53 EEST 2020
+;; MSG SIZE  rcvd: 305
+
+******;; WARNING: recursion requested but not available
+
+root@LEKSIDE-PC:/# dig www.google.com @ns1.chalmers.se
+
+; <<>> DiG 9.16.1-Ubuntu <<>> www.google.com @ns1.chalmers.se
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 23982
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+; COOKIE: af736124992174d4bd91edcb5f89c4675caee9ad598ca2ec (good)
+;; QUESTION SECTION:
+;www.google.com.                        IN      A
+
+;; Query time: 1 msec
+;; SERVER: 2001:6b0:2:10::1#53(2001:6b0:2:10::1)
+;; WHEN: Fri Oct 16 19:03:51 EEST 2020
+;; MSG SIZE  rcvd: 71
+
+
+The client requests RD but the server can accept or reject this request. It is ns1.chalmers.se is a local server for chalmers IP records 
+and does not cache DNS records of external websites.
+Hence, the warning message: WARNING: recursion requested but not available
+
+c)
+
+root@LEKSIDE-PC:/# dig kth.se +nssearch
+SOA a.ns.kth.se. hostmaster.kth.se. 2020101341 14400 900 604800 86400 from server 129.16.253.252 in 2 ms.
+SOA a.ns.kth.se. hostmaster.kth.se. 2020101341 14400 900 604800 86400 from server 2001:6b0:2:20::1 in 1 ms.
+SOA a.ns.kth.se. hostmaster.kth.se. 2020101341 14400 900 604800 86400 from server 130.235.20.5 in 5 ms.
+SOA a.ns.kth.se. hostmaster.kth.se. 2020101341 14400 900 604800 86400 from server 2001:6b0:1::250 in 8 ms.
+SOA a.ns.kth.se. hostmaster.kth.se. 2020101341 14400 900 604800 86400 from server 130.237.72.250 in 8 ms.
+SOA a.ns.kth.se. hostmaster.kth.se. 2020101341 14400 900 604800 86400 from server 2001:6b0:1::246 in 8 ms.
+SOA a.ns.kth.se. hostmaster.kth.se. 2020101341 14400 900 604800 86400 from server 130.237.72.246 in 8 ms.
+root@LEKSIDE-PC:/#
+
+oot@LEKSIDE-PC:/# dig kth.se NS
+
+; <<>> DiG 9.16.1-Ubuntu <<>> kth.se NS
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 24956
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;kth.se.                                IN      NS
+
+;; ANSWER SECTION:
+kth.se.                 1566    IN      NS      nic2.lth.se.
+kth.se.                 1566    IN      NS      ns2.chalmers.se.
+kth.se.                 1566    IN      NS      b.ns.kth.se.
+kth.se.                 1566    IN      NS      a.ns.kth.se.
+
+;; Query time: 1 msec
+;; SERVER: 10.0.0.1#53(10.0.0.1)
+;; WHEN: Fri Oct 16 19:22:23 EEST 2020
+;; MSG SIZE  rcvd: 120
+
+
+********************************************************************************************************
+**************************************************************************************************
+Question 3c
+
+
+root@LEKSIDE-PC:/# dig kth.se mx
+
+; <<>> DiG 9.16.1-Ubuntu <<>> kth.se mx
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 41341
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;kth.se.                                IN      MX
+
+;; ANSWER SECTION:
+kth.se.                 1340    IN      MX      10 mx.kth.se.
+kth.se.                 1340    IN      MX      20 mx-alt1.kth.se.
+
+;; Query time: 1 msec
+;; SERVER: 10.0.0.1#53(10.0.0.1)
+;; WHEN: Fri Oct 16 19:29:49 EEST 2020
+;; MSG SIZE  rcvd: 78
+
+root@LEKSIDE-PC:/# dig kth.se soa
+
+; <<>> DiG 9.16.1-Ubuntu <<>> kth.se soa
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 10816
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;kth.se.                                IN      SOA
+
+;; ANSWER SECTION:
+kth.se.                 1800    IN      SOA     a.ns.kth.se. hostmaster.kth.se. 2020101341 14400 900 604800 86400
+
+;; Query time: 3 msec
+;; SERVER: 10.0.0.1#53(10.0.0.1)
+;; WHEN: Fri Oct 16 19:29:55 EEST 2020
+;; MSG SIZE  rcvd: 87
+
+root@LEKSIDE-PC:/#
+
+
+***************************************************
+
+root@LEKSIDE-PC:/# dig a.ns.kth.se @ns2.chalmers.se
+
+; <<>> DiG 9.16.1-Ubuntu <<>> a.ns.kth.se @ns2.chalmers.se
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 28647
+;; flags: qr aa rd; QUERY: 1, ANSWER: 1, AUTHORITY: 4, ADDITIONAL: 6
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+; COOKIE: fb8af595d3ed857e21723df45f89cc45936257d8ac8efb0e (good)
+;; QUESTION SECTION:
+;a.ns.kth.se.                   IN      A
+
+;; ANSWER SECTION:
+a.ns.kth.se.            1800    IN      A       130.237.72.246
+
+;; AUTHORITY SECTION:
+kth.se.                 1800    IN      NS      a.ns.kth.se.
+kth.se.                 1800    IN      NS      b.ns.kth.se.
+kth.se.                 1800    IN      NS      ns2.chalmers.se.
+kth.se.                 1800    IN      NS      nic2.lth.se.
+
+;; ADDITIONAL SECTION:
+a.ns.kth.se.            1800    IN      AAAA    2001:6b0:1::246
+b.ns.kth.se.            1800    IN      AAAA    2001:6b0:1::250
+ns2.chalmers.se.        172800  IN      AAAA    2001:6b0:2:20::1
+b.ns.kth.se.            1800    IN      A       130.237.72.250
+ns2.chalmers.se.        172800  IN      A       129.16.253.252
+
+;; Query time: 2 msec
+;; SERVER: 2001:6b0:2:20::1#53(2001:6b0:2:20::1)
+;; WHEN: Fri Oct 16 19:37:26 EEST 2020
+;; MSG SIZE  rcvd: 280
+
+
+
+
+*************************
+
+peter@LEKSIDE-PC:~$ dig a.ns.kth.se @sunic.sunet.se
+
+; <<>> DiG 9.16.1-Ubuntu <<>> a.ns.kth.se @sunic.sunet.se
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: REFUSED, id: 34703
+;; flags: qr rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;a.ns.kth.se.                   IN      A
+
+;; Query time: 16 msec
+;; SERVER: 2001:6b0:7::2#53(2001:6b0:7::2)
+;; WHEN: Fri Oct 16 19:43:59 EEST 2020
+;; MSG SIZE  rcvd: 40
+
+
+It only has an A record to query and not NS. So the request was refused., 
+sunic.sunet.se just authoratuve to chalmers not nth so it cannot give authurative answers to kth.se
+
+*************************************************************************************
+
+4. Survival time for cached information
+
+
+peter@LEKSIDE-PC:~$ dig www.kth.se
+
+; <<>> DiG 9.16.1-Ubuntu <<>> www.kth.se
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 53170
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;www.kth.se.                    IN      A
+
+;; ANSWER SECTION:
+www.kth.se.             600     IN      A       130.237.28.40
+
+;; Query time: 0 msec
+;; SERVER: 10.0.0.1#53(10.0.0.1)
+;; WHEN: Fri Oct 16 19:48:25 EEST 2020
+;; MSG SIZE  rcvd: 55
+
+
+*********************
+TTL: Time-To-Live
+You can set TTL for the DNS record that defines how long a resolver supposed to cache the DNS query before the query expires. 
+TTL typically used to reduce the load on your authoritative name servers and to speed up DNS queries for clients
+
+DNS TTL (time to live) represents the time each step takes for DNS to cache a record. 
+The TTL is like a stopwatch for how long to keep a DNS record.
+The ultimate goal of DNS caching is to speed up internet load times and decrease the load on the DNS servers
+**********************************
+
+dig kth.se @ns2.chalmers.se
+
+There was a  difference. The TTL value seems to remain the same; unchanging.
+
+ A noticeable positive is the quick turnaround time on DNS lookups, thus speeding up your internet browsing experience overall. 
+ It is much faster to check a cached version against your local resolver than it is to perform a DNS record lookup.
+ You want it to be the perfect balance between “quickly updating” and “resource savvy.”
+

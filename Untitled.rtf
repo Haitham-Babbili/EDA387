@@ -1,0 +1,124 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33100\viewh20700\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf0 suggestion: each processor reads the secret of every other processor and puts it in its own r-register. after that, each processor reads the r-register of every other processor and assembles a frequency table for the values it found. the frequency of that processor's own secret will be the only one with a frequency not divisible by (n-2)\
+problem: size of r depends on n (linearly) :/\
+\
+improvement: instead of storing all secrets separately, sum them and store the sum in r, then be a bit more clever and use addition, subtraction and algebra to figure out the secret (i haven't proven this, but it should be possible)\
+problem: size of r still depends on n (but at least it's logarithmically)\
+\
+From Martin Hilgendorf to Everyone: (3:26 PM)\
+\
+I came up with the addition idea the other day and implemented  a prototype in python using addition, and it seems to work\
+But the solutions memory requirements scales with the number of processors present\
+\
+From Stig Arne Knoph Muller to Everyone: (3:27 PM)\
+\
+What if a processor dies while the counting still is going on?\
+\
+From Alexander to Everyone: (3:38 PM)\
+\
+Is it possible for a process to ask another process to perform an action. For example, can processor p_i ask p_j to write s_i into r_j. p_i can then read that register to get its own secret?\
+\
+From Adam Frithiofson to Everyone: (3:40 PM)\
+\
+@Alexander how are you going to address a specific processor? you can only write to your own register and the other processors will have no way of telling which one the request is directed to\
+\
+\
+From Alexander to Everyone: (3:41 PM)\
+\
+But the processor has an internal identifier for the other processsors. It can choose one processor to write the secret into its own register. The original processor can then read its own secret in that processor?\
+I might be misunderstanding something though\
+\
+\
+From Stig Arne Knoph Muller to Everyone: (1:18 PM)\
+\
+Lab 2.1:\
+1. General election algoritm (Dolev fig 2.9) to find a leader\
+Split the register to hold more then own ID.\
+Make spanning tree according to Dolev fig 2.1\
+Euler tour to define virtual ring. The write/read secret around ring.\
+\
+\
+From Neethu Harindran to Everyone: (1:28 PM)\
+\
+I have something as a continuation to an already proposed solution.. I am not sure if my thoughts are in right direction..\
+\
+From Neethu Harindran to Everyone: (1:28 PM)\
+\
+Step 1: For every r register of a process, sum the s values of all other processess and write it to its r register. \uc0\u8232 \u8232 Step2: For any process p(i), to get the value of s(i),sum up all the r values of all processes except i- th process. Subtract [(n-2) * (r value of i-th process)]   from the above sum . Divide the result by (n-1).\
+\
+From Stig Arne Knoph Muller to Everyone: (1:28 PM)\
+\
+Feel free to comment this I have Discord TheStig#6698 if you want to discuss.\
+\
+\
+\
+\
+\
+=================\
+\
+From Olalekan Peter Adare to Everyone: (4:41 PM)\
+\
+can we use routing protocol, like Open Shortest Path First (OSPF) to show a relationship with this?\
+\
+\
+From Johan \
+So a system configuration (system state) is defined by the internal state of each processor as well as the contents all message queues between processors\
+\
+\
+From Johannes to Everyone: (1:49 PM)\
+\
+Must all steps contain a communication operation? (Yes )\
+Or can the system configuration change merely from internal computations in the processors?\
+\
+But wouldn't it still change the individual processors state? Which is part of the system configuration?\
+\
+From Armand Ghaffarpour to Everyone: (1:52 PM)\
+\
+I think the naming comes down to the concept   whether you are sharing a memory or not. If you are sharing the memory anyone can read and write to the shared memory. But if the memory isn't shared and you need to communicate you need to send and receive messages\
+\
+From Johannes to Everyone: (1:54 PM)\
+\
+Okay, if it's a model convention I understand the reasoning. Thanks!\
+Yes!\
+\
+\
++++++\
+\
+From Marcel Vacante to Everyone: (2:26 PM)\
+\
+In a self-stabilizing system, aren't all executions legal as they eventually end up exhibiting legal behaviour?\
+\
+From Adam Frithiofson to Everyone: (2:27 PM)\
+\
+i don't think having 0 or 2 leaders would be considered legal in the leader election case ;)\
+\
+From Marcel Vacante to Everyone: (2:27 PM)\
+\
+No, but they would recover given the self-stabilizing property, thus making the execution legal (eventually)? I might have misunderstood\
+Ok thanks, I had misunderstood the definition of legal execution. Thanks!\
+\
+From Armand Ghaffarpour to Everyone: (2:29 PM)\
+\
+the whole thing is defined as a legal behaviour though maybe that\
+\
+\
+?+++\
+From Jacob Thorselius Pedersen to Everyone: (2:41 PM)\
+\
+What does MAU stand for?\
+\
+From Jacob Thorselius Pedersen to Everyone: (2:42 PM)\
+\
+DuckDuckGo tells me its Media Access Unit :D\
+\
+\
+\
+\
+\
+}
